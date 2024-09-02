@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px 100px 100px;
+            grid-template-areas: 
+            "header header header header"
+            "menu main main main"
+            "menu section section section"
+            "footer footer footer footer"
+            ;
+            gap: 10px;
+        }
+        header{
+            background-color: palevioletred;
+            grid-area: header;
+        }
+        .menu{
+            background-color: aqua;
+            grid-area: menu;
+        }
+        main{
+            background-color: brown;
+            grid-area: main;
+        }
+        section{
+            background-color: dodgerblue;
+            grid-area: section;
+        }
+        footer{
+            background-color: rgb(50, 50, 201);
+            grid-area: footer;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid-Areas</h1>
+    <div class="box">
+        <header>header</header>
+        <div class="menu">menu</div>
+        <main>main</main>
+        <section>section</section>
+        <footer>footer</footer>
+    </div>
+</body>
+</html> 
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="change">DOM</h1>
+    <button onclick="changed()">click me</button>
+    <script>
+        function changed(){
+            const heading=document.getElementById("change");
+            heading.textContent="changing";
+        }
+        
+    </script>
+</body>
+</html> -->
